@@ -1,0 +1,5 @@
+CREATE TABLE transactions (
+    transactionId INT AUTO_INCREMENT PRIMARY KEY,
+    accountId VARCHAR(255) NOT NULL,
+    transactionDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
