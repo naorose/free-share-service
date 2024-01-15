@@ -41,12 +41,9 @@ This project implements a backend service for a free stock trading application. 
 ## Assumptions
 
 - Assume that any databases and tables referenced in the SQL scripts in the 'database' directory are pre-existing and non-empty.
-- The `Broker.listTradableAssets` method excludes queued assets, acknowledging that these trades are pending and not immediately tradable.
-- Users can claim only one free share, and their eligibility is controlled via the `free_share_status` field in the user table.
-- The market can be open or closed, affecting trade execution timing.
-- Only whole shares are purchasable and holdable in accounts.
 - In regards to the queueing mechanism, assume that an active event-triggering system _(e.g. AWS scheduled Lambda, Google Cloud Scheduler, Airflow, Cron Job, etc.)_ is in place, which automatically processes queued trades at the start of the market day or at an appropriate predetermined time. This ensures that all pending trades are executed timely and efficiently.
-
+- The `Broker.listTradableAssets` method excludes queued assets, acknowledging that these trades are pending and not immediately tradable.
+- Only whole shares are purchasable and holdable in accounts.
 
 ## Installation
 
